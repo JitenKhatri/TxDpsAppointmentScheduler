@@ -30,4 +30,10 @@ void ScheduleAppointment()
     driver.FindElement(By.XPath("//span[text()='New Appointment']")).Click();
 
     driver.FindElement(By.XPath("//span[text()='Apply for first time Texas DL/Permit']")).Click();
+
+
+    driver.FindElement(By.XPath("//label[text()='Email']/following-sibling::input")).SendKeys(formData["Email"]);
+    driver.FindElement(By.XPath("//label[text()='Verify Email']/following-sibling::input")).SendKeys(formData["Email"]);
+    driver.FindElement(By.XPath("//label[contains(text(), 'I prefer to receive notifications via text message')]/preceding-sibling::input")).Click();
+    driver.FindElement(By.XPath("//label[text()='Email']/following-sibling::input")).SendKeys(formData["ZipCode"]);
 }
